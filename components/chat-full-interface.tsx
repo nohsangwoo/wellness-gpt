@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import type React from "react"
+import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { ChatMessage } from "@/components/chat-message"
 import { Card } from "@/components/ui/card"
@@ -560,7 +561,12 @@ export function ChatFullInterface() {
   return (
     <div className="flex flex-col h-screen">
       <header className="border-b p-4">
-        <h1 className="text-2xl font-bold text-center text-[#0a1a3a]">WellnessGPT</h1>
+        <Link
+          href="/"
+          className="text-2xl font-bold text-center text-[#0a1a3a] hover:text-blue-600 transition-colors block"
+        >
+          WellnessGPT
+        </Link>
       </header>
 
       <div className="flex-1 overflow-auto p-4 space-y-4">
